@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>YOjeon</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <script src="secretImg.js"></script>
+    <div id="fix">
+        <div id="profile">
+            <div id="imgBox">
+                <img src="profile.jpg" alt="프로필 사진" />
+            </div>
+            <div id="textBox">
+                <p id="nameOf">해물파전</p>
+            </div>
+        </div>
+        <div id="index">
+            <ul style="list-style: none;">
+                <li id="ch1">1. 출생</li>
+                <li id="ch2">2. 특징</li>
+                <li id="ch3">3. 업적</li>
+                <li id="ch4" style="display: none;">SPECIAL_PAGE</li>
+            </ul>
+        </div>
+        <div id="code">
+            <label id="ch4Code">SECRET_CODE : <input type="type" id="secretCode" onkeyup="codeRight(event)"></label>
+            <script>
+                function codeRight(event) {
+                    if (event.key === "Enter") {
+                        const userCode = document.getElementById("secretCode").value;
+                        if (userCode === "TREVI") {
+                            document.getElementById("ch4").style.display = "block";
+                            document.getElementById("ch4Code").style.display = "none";
+                        } else {
+                            alert("ERROR : WRONG_CODE");
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div id="content">
+        <div id="content1" class="content-section" style="display:block;">
+            <p class="chName">1. 출생</p>
+            <p class="chContent">2008년 4월 14일 태어났다.<br>가족 구성원은 아버지, 어머니, 쌍둥이 동생, 강아지(꿀빵)가 있다.<br>오른쪽은 꿀빵의 사진이다.<br><br><a href="https://chungsol-e.goesn.kr/chungsol-e/main.do">청솔초등학교</a>, <a href="https://chongsol-m.goesn.kr/chongsol-m/main.do">청솔중학교</a>, <a href="https://seohyun-h.goesn.kr/seohyun-h/main.do">서현고등학교</a>에 진학했다.<br>어릴 적 경기도 대회에서 1등을 한 적이 있다고 자랑한다.</p>
+            <div class="secret">
+                <img class="secretImg" src="profile.jpg">
+                <p class="secretWord">T</p>
+            </div>
+        </div>
+        <div id="content2" class="content-section" style="display:none;">
+            <p class="chName">2. 특징</p>
+            <p class="chContent">고동색을 좋아한다.<br>-> 증거 : 고동색 헤드셋과 펜을 항상 들고 다님, 먼저 친구가 의자에 앉아있는데 의자가 고동색이라서 자신이 앉고 싶어서 비켜달라 한 전적이 있음, 고동색을 갈색이라 부르면 싫어함<br><br>기억력이 좋다. 주로 쓸데없는 걸 많이 기억한다.<br><br>갈색인가 고동색인가 아디다스 집업?을 굉장히 좋아한다. 무슨 사연이 있는 게 분명함<br><br>트레비 음료수를 굉장히 좋아한다. 무슨 사연이 있는 게 분명함</p>
+            <div class="secret">
+                <img class="secretImg" src="adidas.jpg">
+                <p class="secretWord">R</p>
+            </div>
+            <div class="secret">
+                <img class="secretImg" src="trevi.jpg">
+                <p class="secretWord">E</p>
+            </div>
+        </div>
+        <div id="content3" class="content-section" style="display:none;">
+            <p class="chName">3. 업적</p>
+            <p class="chContent">공항 검색대에서 너클이 걸린 적 있다(충격).<br><br>뜨개질을 해서 친구에게 네잎클로버(잘 뜸), 귤(자꾸 납작해져서 귀여움), 물병 옷(끈이 맘에 듦)을 떠준 전적이 있다.<br><br>친구가 자신의 홈페이지를 만든다고 3시간을 썼다는데 캔바에서는 5분에 만든다고 하고 친구의 정성을 무시함. <a id="small">아니 이거는 프로그래밍을 언어를 써서 하나하나 정성을 쏟고 공들여서 만드는 거고 그리고 그거는 제약이랑 한계가 있는데 이거는 진짜 내가 원하는대로 만들고 내가 원하는 기능도 추가하고 그럴 수 있고 그리고 내가 창의력과 특별한 기능을 써서 시크릿코드도 넣어줬는데 그런 발언은 좀 아니지 솔직히 듣고 좀 충격받음 이거 진짜 내 정성이 들어갔는데</a><br><br>사족보행을 자주 함.(negative)<br><br>맞춤법을 잘 지킴(positive)</p>
+            <div class="secret">
+                <img class="secretImg" src="clover.jpg" style="width: 200px; height: 200px;">
+                <p class="secretWord">V</p>
+            </div>
+            <div class="secret">
+                <img class="secretImg" src="tangerine.jpg" style="width: 200px; height: 200px;">
+                <p class="secretWord">I</p>
+            </div>
+        </div>
+        <div id="content4" class="content-section" style="display:none;">
+            <p class="chName">SECRET_PAGE</p>
+            <p class="chContent">이거 진짜 비밀인데 간의 기별인 줄 알았음</p>
+        </div>
+    </div>
+    <script>
+        function showContent(id) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        document.getElementById("ch1").onclick = () => showContent("content1");
+        document.getElementById("ch2").onclick = () => showContent("content2");
+        document.getElementById("ch3").onclick = () => showContent("content3");
+        document.getElementById("ch4").onclick = () => showContent("content4");
+    </script>
+
+</body>
+
+</html>

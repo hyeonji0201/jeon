@@ -1,0 +1,131 @@
+@font-face {
+    font-family: '양진체';
+    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: '양진체', serif;
+    overflow: hidden;
+}
+
+#fix {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    border-right: 2px solid #F5F5DC;
+    background-color: #400000;
+    color: #F5F5DC;
+}
+#profile {
+    width: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 25px 10.4px;
+}
+
+#imgBox {
+    height: 120px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+#imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s linear;
+    display: block;
+}
+
+#imgBox img:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+#textBox {
+    padding: 10px 15px;
+    padding-top: 20px;
+    border-bottom: 1px solid #F5F5DC;
+}
+
+#nameOf {
+    font-size: 40px;
+    margin: 0;
+    color: #F5F5DC;
+}
+ul {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+li:hover {
+    background-color: #F5F5DC;
+    color: #400000;
+    cursor: pointer;
+}
+#code {
+    padding-left: 20px;
+}
+#secretCode {
+    background-color: #F5F5DC;
+    color: #400000;
+}
+#content {
+    margin-left: 300px;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url(wood.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #400000;
+}
+.content-section {
+    display: none;
+}
+.chName {
+    font-size: 40px;
+    border-bottom: #400000 2px solid;
+    padding: 10px;
+}
+.chContent {
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.secret{
+    position: relative;
+    display: inline-block;
+    left: 80px;
+}
+.secretImg {
+    transition: opacity 2s ease;
+    opacity: 1;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+.secretWord {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+a[href] {
+    color: #400000;
+}
+#small {
+    font-size: 5px;
+}
